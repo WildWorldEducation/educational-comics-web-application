@@ -1,0 +1,752 @@
+
+html, body {
+	position: relative;
+	height: 100%;
+	background-color: #d6b47e!important;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	color: black;
+}
+		
+.website-body {
+	background: #d2d4e6!important;
+	height: 100%;
+}
+
+
+.colour-panel {
+	width: 100%;
+	max-width: 45vw;
+	height: auto;
+}
+
+@media (max-width: 768px) {
+
+	.homescreen-fairyimg {
+		height: 350px;
+	}
+
+	.colour-panel {
+		max-width: 75vw;;
+		height: auto;
+	}
+}
+
+#room {
+	background-image: url("../hub/room.jpg");
+	background-repeat: no-repeat;
+	background-size: contain
+}
+
+/* for mobile screens */
+
+@media (max-width: 576px) {
+
+	/*logo image */
+	.navbar-brand img {
+		height: 50px;
+		width: 50px;
+	}
+
+	.colour-panel {
+		max-width: 100%;
+		height: auto;
+	}
+}
+	
+		
+.dialogue {
+	text-align:center; color:white;
+}
+			
+.continue {
+	text-align:right
+}
+		
+.centerimage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+		
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: 180px;
+}
+	
+.vocab-list 
+{
+	background-color: brown!important;
+	border: 1px solid white!important;
+	border-radius: 2%;
+	color: pink;
+}
+
+.footer {
+	width: 100%;
+	height: 40px; /* Set the fixed height of the footer here */
+	line-height: 0px; /* Vertically center the text there */
+	background-color: #E8B274;
+	text-align: right;
+	padding-right: 10px;
+}
+	
+.syllabus-btn
+{
+	background-color: orangered;
+	color: beige;
+	border: 1px solid black!important;
+}
+
+
+.exercise-images
+{
+	max-height: 70vh;
+}
+
+	
+@media only screen and (max-width: 600px){
+	img {
+		margin-left:auto;
+		margin-right:auto;
+	}
+				
+	.continue {
+		text-align: auto;
+		margin-bottom: 40px;
+	}
+	
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.left {	
+		float:left;
+	}				
+}
+	
+	
+	
+/* Message in a Bottle - exercise section*/
+		
+.placeholder {
+	width: 350px;
+	height: 45px;
+	border: 1px solid black;
+}
+	
+	
+
+/* Learning about Colour - exercise section*/
+		
+.letter-placeholder {
+	width: 45px;
+	height: 45px;
+	border: 1px solid black;
+}
+
+.word-placeholder {
+	width: 100px;
+	height: 45px;
+	border: 1px solid black;
+}
+
+.draggable {
+	height: 45px;
+}
+
+.text-drag {
+	font-size: 1.8rem;
+	font-family: 'Indie Flower', cursive;
+}
+
+@media screen and (max-width: 768px) {
+	.text-drag {
+		font-size: 1.4rem;
+		font-family: 'Indie Flower', cursive;
+	}
+}
+
+.text {
+	font-size: 1.2rem;
+	font-family: 'Indie Flower', cursive;
+}
+
+
+.content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex-shrink: 0;
+}
+	
+
+.panel {
+	background: #a7c6eb;
+	border: 2px solid black!important;
+}
+
+ 
+
+	/* for the Home view, for choosing familiar*/
+
+.fairy {
+	cursor: pointer;
+}
+
+/* #fairy {
+	max-width: 400px;
+}
+
+@media screen and (max-width: 992px) {
+	#fairy {
+		
+		max-width: 300px;
+	} */
+
+
+	/* HIDE RADIO */
+[type=radio] { 
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+	cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+	outline: 2px solid black;
+}
+
+
+.img-fullscreen {
+	max-height: 74vh;
+}
+
+
+/* Artemis and the Animals ---------------------------- */
+
+#imgMapContainer {
+		position: relative;
+		width: 800px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+	#imgMapContainer {
+		position: relative;
+		width: 700px;
+	}
+	
+	#imgMapContainer img {
+		position: relative;
+		width: 700px;
+		height: 525px;
+	}
+
+
+	#p02-1 {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+		height: 50px;
+		width: 350px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-2 {
+		position: absolute;
+		top: 0px;
+		left: 350px;
+		display: none;
+		height: 50px;
+		width: 350px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-3 {
+		position: absolute;
+		top: 325px;
+		left: 0px;
+		display: none;
+		height: 200px;
+		width: 700px;
+		border: 1px solid black;
+		background: white;
+	}
+}
+
+
+
+@media screen and (max-width: 768px) {
+	#imgMapContainer {
+		position: relative;
+		width: 500px;
+	}
+	
+	#imgMapContainer img {
+		position: relative;
+		width: 500px;
+		height: 375px;
+	}
+
+	#p02-1 {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+		height: 50px;
+		width: 250px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-2 {
+		position: absolute;
+		top: 0px;
+		left: 250px;
+		display: none;
+		height: 50px;
+		width: 250px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-3 {
+		position: absolute;
+		top: 225px;
+		left: 0px;
+		display: none;
+		height: 150px;
+		width: 500px;
+		border: 1px solid black;
+		background: white;
+	}
+}
+
+
+@media screen and (max-width: 576px) {
+	#imgMapContainer {
+		position: relative;
+		width: 400px;
+	}
+	
+	#imgMapContainer img {
+		position: relative;
+		width: 400px;
+		height: 300px;
+	}
+
+	#p02-1 {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+		height: 50px;
+		width: 200px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-2 {
+		position: absolute;
+		top: 0px;
+		left: 200px;
+		display: none;
+		height: 50px;
+		width: 200px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-3 {
+		position: absolute;
+		top: 225px;
+		left: 0px;
+		display: none;
+		height: 150px;
+		width: 400px;
+		border: 1px solid black;
+		background: white;
+	}
+}
+
+
+
+
+/* bubbles for image maps*/
+
+@media screen and (min-width: 992px) {
+
+	#p02-1 {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+		height: 50px;
+		width: 400px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-2 {
+		position: absolute;
+		top: 0px;
+		left: 400px;
+		display: none;
+		height: 50px;
+		width: 400px;
+		border: 1px solid black;
+		background: white;
+	}
+
+	#p02-3 {
+		position: absolute;
+		top: 450px;
+		left: 0px;
+		display: none;
+		height: 150px;
+		width: 800px;
+		border: 1px solid black;
+		background: white;
+	}
+}
+
+
+
+
+#p03-1 {
+	position: absolute;
+	top: 0px;
+	left: 150px;
+	display: none;
+	height: 50px;
+	width: 100px;
+	border: 1px solid black;
+	background: white;
+}
+#p03-2 {
+	position: absolute;
+	top: 0px;
+	left: 550px;
+	display: none;
+	height: 50px;
+	width: 100px;
+	border: 1px solid black;
+	background: white;
+}
+#p03-3 {
+	position: absolute;
+	top: 350px;
+	left: 0px;
+	display: none;
+	height: 50px;
+	width: 100px;
+	border: 1px solid black;
+	background: white;
+}
+#p03-4 {
+	position: absolute;
+	top: 350px;
+	left: 700px;
+	display: none;
+	height: 50px;
+	width: 100px;
+	border: 1px solid black;
+	background: white;
+}
+#p03-5 {
+	position: absolute;
+	top: 550px;
+	left: 0px;
+	display: none;
+	height: 50px;
+	width: 200px;
+	border: 1px solid black;
+	background: white;
+}
+#p03-6 {
+	position: absolute;
+	top: 550px;
+	left: 500px;
+	display: none;
+	height: 50px;
+	width: 150px;
+	border: 1px solid black;
+	background: white;
+}
+
+
+/* map overlays*/
+
+#ghana {
+	z-index: 2;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	top: 150px;
+	left: 200px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#iris {
+	z-index: 2;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 500px;
+	top: 200px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#london {
+	z-index: 2;
+	width: 140px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 104px;
+	top: 0px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#capetown {
+	z-index: 2;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 380px;
+	top: 500px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#village {
+	z-index: 2;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 300px;
+	top: 20px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#congo {
+	z-index: 2;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 300px;
+	top: 290px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#kush {
+	z-index: 2;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 470px;
+	top: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#fish-people {
+	z-index: 2;
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+	left: 520px;
+	top: 400px;
+	line-height: 100px;
+	text-align: center;
+}
+
+
+#village:hover, #capetown:hover, #london:hover, #iris:hover, #ghana:hover, #congo:hover, #kush:hover {
+	background: rgba(50, 50, 50, 0.1);
+	border: 2px solid black;
+}
+
+
+@media screen and (max-width: 992px) {
+	#map-fairy {
+		width: 400px;
+	}
+
+
+
+@media screen and (max-width: 768px) {
+
+	#map-fairy {
+		width: 300px;
+	}
+
+	#map {
+		width: 500px;
+		height: 420px;
+	}
+
+	#ghana {
+		width: 200px;
+		height: 100px;
+		top: 120px;
+		left: 80px;
+		line-height: 100px;
+	}
+
+	#congo {
+		width: 200px;
+		height: 100px;
+		left: 200px;
+		top: 190px;
+		line-height: 100px;
+	}
+	
+	#kush {
+		width: 100px;
+		height: 50px;
+		left: 340px;
+		top: 100px;
+		line-height: 50px;
+	}
+	
+	#iris {
+		width: 200px;
+		height: 100px;
+		top: 150px;
+		left: 400px;
+		line-height: 100px;
+	}
+	
+	#london {
+		width: 100px;
+		height: 60px;
+		left: 270px;
+		top: 300px;
+		line-height: 60px;
+	}
+	
+	#capetown {
+		width: 100px;
+		height: 70px;
+		left: 270px;
+		top: 330px;
+		line-height: 70px;
+	}
+	
+	#village {
+		width: 100px;
+		height: 50px;
+		left: 180px;
+		top: 20px;
+		line-height: 50px;
+	}
+}
+
+
+@media screen and (max-width: 576px) {
+	#map-fairy {
+		width: 250px;
+	}
+
+	#map {
+		width: 350px;
+		height: 294px;
+	}
+
+	#ghana {
+		width: 150px;
+		height: 50px;
+		top: 75px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+
+	#congo {
+		width: 150px;
+		height: 50px;
+		left: 100px;
+		top: 130px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+	
+	#kush {
+		width: 50px;
+		height: 50px;
+		left: 240px;
+		top: 60px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+	
+	#iris {
+		width: 150px;
+		height: 50px;
+		top: 120px;
+		left: 270px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+	
+	#london {
+		width: 50px;
+		height: 50px;
+		left: 210px;
+		top: 190px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+	
+	#capetown {
+		width: 100px;
+		height: 50px;
+		left: 170px;
+		top: 240px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+	
+	#village {
+		width: 80px;
+		height: 50px;
+		left: 140px;
+		top: 20px;
+		line-height: 50px;
+		font-size: 80%;
+	}
+}
