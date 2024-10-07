@@ -1,0 +1,112 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<style>
+	body {
+		background-color: seagreen;
+		font-size: 2em;
+	}
+
+
+	.vocab_list {
+		float: left;
+		text-align: center;
+		color: red;
+		margin-top: 60px;
+		margin-right: 0px;
+		margin-left: 0px;
+		font-family: Arial, Helvetica, sans-serif;
+		border-width: 3px;
+		border-style: solid;
+		background-color: white;
+		padding: 10px
+	}
+
+	.instructions {
+
+		text-align: center;
+		color: white;
+		font-size: 1em;
+		float: right;
+		max-width: 70%;
+
+	}
+
+	img {
+		width: 60%;
+
+	}
+
+	form {
+		float: left;
+	}
+
+	@media only screen and (max-width: 600px) {
+
+
+
+		.vocab_list {
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+			display: inline;
+
+		}
+
+		.instructions {
+			width: 100vw;
+			max-width: 100%;
+			float: initial;
+			display: block;
+			text-align: center;
+			font-size: 1em;
+		}
+
+
+
+		img {
+			width: 100vw;
+		}
+
+
+	}
+</style>
+
+
+<div>
+	{% for Answer in data %}
+	{{ Answer.answer }}
+	{% endfor %}
+</div>
+<div class="instructions">use the vocabulary sheet to barter with the Fish Lady for Cowery Shells.
+	<p>
+
+		<img src="{% static 'base/fish-people/fish-people05.jpg' %}" />
+</div>
+<div class="vocab_list">
+	<h3>Useful Vocabulary</h3><br>
+	<li>"shells"</li>
+	<p>
+		<li>"to"</li>
+		<p>
+			<li>"want"</li>
+			<p>
+				<li>"buy"</li>
+				<p>
+					<li>"I"</li>
+					<p>
+						<li>"please"</li>
+						<p>
+</div>
+<br>
+<div>
+	<form action="/Fish_people_quest.html" method="post">
+		{% csrf_token %}
+		{{ form }}
+		<input type="submit" value="speak" />
+	</form>
+</div>
+
+
+{% endblock %}

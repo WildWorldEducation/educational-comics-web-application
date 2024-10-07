@@ -1,0 +1,25 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<style>
+	body {
+		background-color: Turquoise;
+		font-size: 2em;
+	}
+</style>
+
+
+
+<img src="{% static 'base/fish-people/fish-people01.jpg' %}" />
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-12" align="center">
+			<p>You travel for one day. <a href="{% url 'fish-people05' %}">You wake from a dream to hear someone
+					talking to you.<a />
+		</div>
+	</div>
+
+</div>
+{% endblock %}

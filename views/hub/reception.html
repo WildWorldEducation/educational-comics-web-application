@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<style>
+			body {
+			    background-color: #d6b47e;
+			}
+
+
+
+			a {	color:white;
+				font-size: 2em;
+			}
+
+            .speech_bubble {
+                width: 300px;
+                height: 200px;
+
+                border-color: black;
+                border-style: solid;
+                border-width: 4px;
+                border-radius: 25px;
+                background: white;
+                color: black;
+                text-align: center;
+                flex: 1;
+                font-size: 2em;
+                position: relative;
+
+
+            }
+
+            .text  {
+                line-height: 1.5;
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+            }
+
+
+
+
+            .links {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 300px;
+			}
+
+			.flexbox {
+			    display: flex;
+			    width: 60%;
+			}
+
+            img {
+                flex: 2;
+                height: 700px;
+            }
+
+
+
+			@media only screen and (max-width: 600px){
+				a 	{
+					color:white;
+					font-size: 4em;
+					text-align:center;
+
+				}
+
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+	   <!-- <iframe allowtransparency="true" width="800" height="800" src="//scratch.mit.edu/projects/embed/235153770/?autostart=false" frameborder="0" allowfullscreen></iframe>-->
+        <div style="text-align:right; color:white; font-size: 1.3em; float: right">Click on characters to interact</div>
+        <div class = "flexbox">
+            <img src = "/media/Writing_edit.png">
+            <div class = "speech_bubble"><div class = "text">Hello</div></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+    //    $(document).ready(function() {
+    //    $("img").click(function() {
+    //    $("h1").text("Oi! Get back to class.");
+    //    });
+    //    });
+            var arr = [
+           'Oh, hello there child',
+           'are you feeling sick?',
+           'should I call your parents?',
+            ];
+            var cnt = 0;
+
+            $("img").on('click',function (e) {
+            $(".speech_bubble").hide();
+            $(".speech_bubble").text(arr[cnt]).fadeIn(0);
+            cnt++;
+        //    if (cnt > 3) cnt = 0;
+            });
+
+        </script>
+
+        <div class="links">
+		    <a href = "{% url 'home_screen' %}">Go back to dorm room<a/><p></h3>
+		</div>
+	</body>
+</html>

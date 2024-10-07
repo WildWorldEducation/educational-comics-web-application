@@ -1,0 +1,104 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<style>
+	body {
+		background-color: seagreen;
+		color: white;
+		font-size: 2em;
+	}
+
+	.Fisherhaven {
+
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.Koi {
+		height: 100%;
+		vertical-align: bottom;
+		position: absolute;
+		z-index: 2;
+	}
+
+	li {
+		font-size: 1em;
+	}
+
+	.text {
+		position: absolute;
+		right: 0;
+		z-index: 2;
+		bottom: 0px;
+		border-color: black;
+		border-style: solid;
+		border-width: 4px;
+		border-radius: 25px;
+		background: lightblue;
+		color: black;
+	}
+
+	.speech_bubble {
+		width: 300px;
+		height: 200px;
+		border-color: black;
+		border-style: solid;
+		border-width: 4px;
+		border-radius: 25px;
+		background: white;
+		z-index: 2;
+		position: relative;
+		left: 600px;
+		color: black;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 600px) {
+
+		body,
+		html {
+			font-size: 1em;
+			width: 100%;
+			background-color: seagreen;
+		}
+
+		.Fisherhaven {
+			height: 100%;
+			position: absolute;
+			z-index: 1;
+			background-image: url("/media/Fisherhaven.jpg");
+			background-repeat: no-repeat;
+		}
+
+		.Koi {
+			position: absolute;
+			z-index: 2;
+		}
+
+		.text {
+			position: relative;
+			top: 700px;
+			font-size: 3em;
+		}
+
+		li {
+			width: 200vw;
+			font-size: 1em;
+		}
+
+	}
+</style>
+
+<img src="{% static 'base/fish-people/fish-people03.png' %}" class="Koi" />
+<img src="{% static 'base/fish-people/fish-people02.jpg' %}" class="Fisherhaven" />
+<div class="speech_bubble">hello<p>Welcome to Fisherhaven</div>
+<div class="text">
+	<ul class="list">
+		<li><a href="{% url 'fish-people07' %}">I need to see the Fish Princess please</a></li>
+		<p></p>
+		<li><a href="{% url 'fish-people06' %}">back to the docks</a></li>
+	</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<style>
+			body {	background-color: #d6b47e;
+					
+				}
+			
+			#myCanvas {
+				z-index: +1;
+				position: absolute;
+			}
+			
+			img {margin:auto;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				
+			}
+			
+			a {	color:white;
+				font-size: 2em;
+				
+				}
+				
+			.links {
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 300px;
+								
+			}
+			
+			
+			@media only screen and (max-width: 600px){
+				.links {	position: fixed;
+							bottom: 0;
+							right: 50%;
+							left: 50%;
+							text-align: center;
+							
+						
+						}				
+				
+				a 	{	
+						color:white;
+						font-size: 4em;
+						text-align:center;
+				
+				}
+					
+			}
+				
+			
+		</style>
+		<script>
+			
+				//the character
+			var canvas, ctx;
+				function init() {
+			// This function is called after the page is loaded
+			// 1 - Get the canvas
+					canvas = document.getElementById('myCanvas');
+			// 2 - Get the context
+					ctx=canvas.getContext('2d');
+			// 3 - we can draw
+					setInterval(animate, 500);
+				}
+				  
+				  			  
+			//animate
+				function animate() {
+			// clear canvas
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				
+			//draw
+				x= Math.random()+10;
+				ctx.fillStyle='yellow';
+				ctx.fillRect(150, 150,100,100);
+				
+				ctx.clearRect(x+175, 180, 20, 20);
+				ctx.clearRect(x+215, 180, 20, 20);
+		    }
+			
+		</script>
+	</head>
+	
+	<body onload="init();">
+	
+		<div>
+		<canvas id="myCanvas" width="400" height="400"></canvas>
+		<img src="tanna_at_inn.jpg" />
+		</div>
+		<script type="text/javascript">
+			var canvas=document.getElementById('myCanvas');
+			var context=canvas.getContext('2d');
+
+			context.font = "30pt Calibri";
+			context.fillStyle = "white";  
+			context.fillText("Hi there!", 80, 80);
+		</script>
+		<div class="links"><a href = "quests.html">Quests<a/><p><a href = "achievements.html">Achievements</a><p>
+			<a href = "outside.html">Go outside<a/></h3></div>
+		<div>
+	
+	</body>
+</html>
+

@@ -1,0 +1,23 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center mt-3">
+            <img src="{% static "base/london/present-simple-tense-title.svg" %}" class="img-fluid">
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <img src="{% static "base/london/present-simple-tense-01.png" %}"
+                    class="img-fluid mx-auto d-block rounded panel">
+            </div>
+        </div>
+        <div class="row mt-2">
+            <a class="btn btn-outline-dark mx-auto" href="{% url 'london06' %}" role="button">next</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

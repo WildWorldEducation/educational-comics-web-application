@@ -1,0 +1,49 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<style>
+	body {
+		background-color: DarkGreen;
+	}
+
+	.centerimage {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+	}
+
+	a {
+		color: white;
+	}
+
+
+
+	@media only screen and (max-width: 600px) {
+		img {
+			width: 100vw;
+			height: auto;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	}
+</style>
+</head>
+
+<body>
+	<audio controls>
+		<source src="/media/chill2_edit2.wav" type="audio/mpeg">
+	</audio controls>
+
+	<div class="dialogue">
+		<h2>Going on a quest, eh?</h2>
+	</div>
+	<img src="{% static 'base/intro/fairy.png' %}" height="470" width="390" class="centerimage" />
+
+	<div class="continue">
+		<h3><a href="{% url 'fish-people04' %}">to quest<a /></h3>
+	</div>
+
+	{% endblock %}

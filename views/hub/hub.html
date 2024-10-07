@@ -1,0 +1,96 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <a class="navbar-brand" href="/">
+        <img src="../../images/logo.png" width="80" height="80" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'reception' %}">Back to Reception</a>
+    </li>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/index">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href={% url 'room' %}>Your room</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container text">
+    <div class="row mt-3">
+        <div class="col-lg-8">
+            <a href="{% url 'ghana01' %}" id="ghana">
+                Empire of Ghana
+            </a>
+            <a href="{% url 'ethiopia01' %}" id="iris">
+                Empire of Ethiopia
+            </a>
+            <a href="{% url 'london01' %}" id="london">
+                London
+            </a>
+            <a href="{% url 'capetown01' %}" id="capetown">
+                Cape Town
+            </a>
+            <a href="{% url 'numidia01' %}" id="village" class="my-auto">
+                Numidia
+            </a>
+            <a href="{% url 'congo01' %}" id="congo" class="my-auto">
+                Empire of Congo
+            </a>
+            <a href="#" id="kush" class="my-auto">
+                Kush
+            </a>
+            <a href="{% url 'fish-people01' %}" id="fish-people" class="my-auto">
+                Fish People
+            </a>
+            <img src="{% static "base/hub/map.jpg" %}" alt="map" width=700 height=588 alt="map" usemap="#map"
+                class="panel" id="map">
+        </div>
+        <div class="col-lg-4 my-auto text-center">
+            <div class="bg-light border border-dark rounded p-1" id="fairy-dialog-01">The Academy has various tasks
+                that need to be accomplished.</div>
+            <div class="bg-light border border-dark rounded p-1 d-none" id="fairy-dialog-02">I envy you, getting to
+                travel</div>
+            <div class="bg-light border border-dark rounded p-1 d-none" id="fairy-dialog-03">They never choose me
+            </div>
+            <img src="{% static "base/intro/fairy.png" %}" alt="fairy" class=" mt-3 fairy" id="map-fairy" width=400>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script src="{% static "base/javascript/script.js" %}"></script>
+<script>
+
+    var j = 0;
+
+    $('#map-fairy').click(function () {
+        if (j == 0) {
+            $('#fairy-dialog-01').addClass('d-none');
+            $('#fairy-dialog-02').removeClass('d-none');
+            j++;
+        }
+        else {
+            $('#fairy-dialog-02').addClass('d-none');
+            $('#fairy-dialog-03').removeClass('d-none');
+            j++;
+        }
+    });
+</script>
+
+{% endblock %}

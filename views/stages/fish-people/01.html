@@ -1,0 +1,19 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+{% load static %}
+<strong>Quest 1</strong>
+<p>
+
+	The college needs someone to go to Fisherhaven to deliver this letter to the Fish Princess.<p>
+
+		<em>(the Fish People, like all the inhabitants of the World, speak English. The learner is learning
+			English.)</em>
+		<p><br>
+			<img src="{% static 'base/intro/teacher.png' %}" height="550" width="400">
+			<a href="{% url 'fish-people02' %}">Take this page of useful vocabulary to help you.</a>
+
+
+			<h3><a href="{% url 'fish-people03' %}">Go to quest<a /></h3>
+
+			{% endblock %}

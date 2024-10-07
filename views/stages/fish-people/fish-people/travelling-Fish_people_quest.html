@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="/static/style.css">
+		<style>
+			body {
+			    background-color: DarkGreen;
+			}
+
+			a {
+			    color:white;
+			}
+
+			@media only screen and (max-width: 600px){
+				img {
+					width: 100vw;
+					height: auto;
+					margin-left:auto;
+					margin-right:auto;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		 <div class="centerimage">
+			<div class="dialogue"><h2>...dont get lost now</h2>
+			<img src="/media/Forest.jpg" height="540" width="450"/>
+			<h3><a href = "{% url 'map_screen' %}">continue on<a/></h3></div>
+		</div>
+	</body>
+</html>

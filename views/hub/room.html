@@ -1,0 +1,31 @@
+{% extends "base/base.html"  %}
+
+{% block body %}
+<div class="section h-100">
+    <div class="container h-100">
+        <div class="row border border-dark rounded h-100">
+            <div class="col-8" id="room">
+            </div>
+            <div class="col-4">
+                <h3 class="mb-3">account info</h3>
+                <p><strong>name:</strong> <span id="currentUser"></span></p>
+                <p><strong>familiar:</strong> <span id="familiar"></span></p>
+                <!-- {{-- <p><strong>your current courses:</strong></p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Completed</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userCourseList"></tbody>
+                        </table> --}} -->
+                <p><a href="account/vocab">book of vocab</a></p>
+                <p><a href="account/syllabus">book of syllabus</a></p>
+                <p><a href="{% url 'tannas-past01' %}">story of your past</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

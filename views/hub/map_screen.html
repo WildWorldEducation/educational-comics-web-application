@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<script src="../../js/ios-orientationchange-fix.min.js"></script>
+		<style>
+			
+			body {
+				font-size: 2em;
+				background-color:seagreen;
+				color: white;
+			}
+						
+			
+			.fairy {
+				width: 30%;
+				vertical-align: bottom;
+			}
+			
+			
+			.map {
+				width: 69%;
+				vertical-align: bottom;
+			}
+			
+		
+			@media only screen and (max-width: 600px){
+			
+			.fairy {
+				width: auto;
+				max-width: 100%;
+			}
+		
+			.map {
+				width: auto;
+				max-width: 100%;
+			}
+		
+		
+		</style>
+	
+	</head>
+	<body>
+		Choose where you want to go!
+		<div>
+		<img src="Fairy.jpg" class="fairy">
+		
+		
+		<img src="map.jpg" usemap="#map"  class="map">
+
+		<map name="map">
+		   <area shape="rect" coords="430,600,730,750" alt="lets go to Fisherhaven" href="Fisherhaven.html">
+		</map>
+		</div>
+		
+			
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="jquery.rwdImageMaps.min.js"></script>
+		<script>
+			$(document).ready(function(e) {
+				$('img[usemap]').rwdImageMaps();
+				
+				$('area').on('click', function() {
+					alert($(this).attr('alt') + ' clicked');
+				});
+			});
+		</script>
+			
+			
+	</body>
+</html>
+
