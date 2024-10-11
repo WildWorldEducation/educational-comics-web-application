@@ -1,1 +1,1 @@
-# v1
+# Educational Comics Web Application
